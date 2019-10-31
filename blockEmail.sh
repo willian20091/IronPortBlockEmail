@@ -17,7 +17,7 @@
 SERVER = "IP/HOSTNAME"
 DOM = "$(echo $1)"
 VAL=""
-SUSPECT= "blacklist"
+LIST= "blacklist"
 DATA=`date '+%Y-%m-%d %H:%M:%S'`
 
 # ------------------------------------------------------------------------ #
@@ -26,7 +26,7 @@ DATA=`date '+%Y-%m-%d %H:%M:%S'`
 
 validadeEmail(){
 
-	ssh user@$SERVER "dictionaryconfig print $SUSPECT" >> suspeito.txt 
+	ssh user@$SERVER "dictionaryconfig print $LIST" >> suspect.txt 
 
 	if [ $? -eq 1 ];
 	then
@@ -56,7 +56,7 @@ validadeEmail(){
 
 blockEmail(){
 
-	ssh user@$SERVER "dictionaryconfig edit $SUSPECT new $DOM; commit -y"
+	ssh user@$SERVER "dictionaryconfig edit $LIST new $DOM; commit -y"
 
 	if [ $? -eq 0 ];
 	then
