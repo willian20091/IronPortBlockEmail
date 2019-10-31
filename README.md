@@ -43,7 +43,7 @@ This variable receives as a parameter the query return of the email or domain in
 
 This variable is named after the list to be consulted and changed.
 
-## Function ValidityEmail ()
+## Function ValidityEmail()
 
 The code snippet below performs SSH access on the server and collects the list of emails and domains that are subscribed to the blacklist, and saves them all in a text file called <b> suspect.txt </b>
 
@@ -55,7 +55,7 @@ If the command fails, it will do some actions on the file to remove unnecessary 
 
 Then it will make the necessary comparisons to check if the email or domain to block is already registered, otherwise it calls <b> blockEmail () </b> to block it.
 
-## Function blockEmail ()
+## Function blockEmail()
 
 The code snippet below performs SSH access on the server to add the email or domain to the blacklist, and then commits this action.
 
