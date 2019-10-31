@@ -17,7 +17,7 @@
 SERVER = "IP/HOSTNAME"
 DOM = "$(echo $1)"
 VAL=""
-SUSPECT= "Suspeito"
+SUSPECT= "blacklist"
 DATA=`date '+%Y-%m-%d %H:%M:%S'`
 
 # ------------------------------------------------------------------------ #
