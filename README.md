@@ -43,11 +43,11 @@ This variable receives as a parameter the query return of the email or domain in
 
 This variable is named after the list to be consulted and changed.
 
-## ValidityEmail () Function
+## Function ValidityEmail ()
 
 The code snippet below performs SSH access on the server and collects the list of emails and domains that are subscribed to the blacklist, and saves them all in a text file called <b> suspect.txt </b>
 
-ssh user @ $ SERVER "dictionaryconfig print $ LIST" >> suspect.txt
+    ssh user @ $ SERVER "dictionaryconfig print $ LIST" >> suspect.txt
 
 After that it validates if the command has any errors. If so, it returns an error message to the user.
 
@@ -55,11 +55,11 @@ If the command fails, it will do some actions on the file to remove unnecessary 
 
 Then it will make the necessary comparisons to check if the email or domain to block is already registered, otherwise it calls <b> blockEmail () </b> to block it.
 
-## blockEmail () Function
+## Function blockEmail ()
 
 The code snippet below performs SSH access on the server to add the email or domain to the blacklist, and then commits this action.
 
-ssh user @ $ SERVER "dictionaryconfig edit $ LIST new $ DOM; commit -y"
+    ssh user @ $ SERVER "dictionaryconfig edit $ LIST new $ DOM; commit -y"
 
 After that it validates if the command has been executed and notifies the user if it has been blocked or if an error has occurred.
 
