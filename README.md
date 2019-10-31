@@ -31,7 +31,7 @@ For the operation of the script must be set as a parameter the email or domain t
 
 This variable must be added to the IronPort server IP or your network hostname.
 
-#### SUN
+#### DOM
 
 This variable receives the value entered as a parameter in script execution.
 
