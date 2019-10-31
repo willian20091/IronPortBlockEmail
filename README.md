@@ -69,7 +69,7 @@ Any doubt, I am available.
 
 Feel free to send me a <b> poll request </b> to improve this code.
 
-# Portugês Brasil
+# Português Brasil
 
 Olá Pessoal me chamo Willian Ferreira e estou aqui para compartilhar com a comunidade uma solução de um problema que enfrentei no trabalho.  
 
