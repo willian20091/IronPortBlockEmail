@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #!/usr/bin/env bash
 
-# -- Variaveis e importações ---
+# -- Imports ---
 
 import subprocess
 import os
@@ -11,7 +11,7 @@ import sys
 
 HOST="192.168.0.100" 
 
-# -- Métodos/def ---
+# -- def ---
 
 def list_all_senders():
     sender_list = []
@@ -36,7 +36,7 @@ def remove_sender(url):
             commit1 = subprocess.getoutput('ssh ironport@' + HOST + ' "dictionaryconfig edit LIST delete "' + url + '"; commit -y"')
             return True
         except:
-            print("Erro no processo de desbloqueio")
+            print("Unlocking process error")
     else:
         return False
 
@@ -50,11 +50,14 @@ def block_sender(url):
             commit1 = subprocess.getoutput('ssh ironport@' + HOST + ' "dictionaryconfig edit LIST new "' + url + '"; commit -y"')
             return True
         except:
-            print("Erro no processo de bloqueio")
+            print("Blocking process error")
 
 def main():
+    print(list_all_senders())
     consulting("teste.com.br")
+    block_sender(teste.com.br)
+    remove_sender("teste.com.br")
 
-# -- Início ---
+# -- main ---
 
 main()
